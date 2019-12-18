@@ -6,13 +6,23 @@ import './App.css';
 
 function App() {
   const [members, setMembers] = useState(TeamMembers);
-  console.log(List);
+  console.log(members);
+
+  const addNewMember = member => {
+    const newMember = {
+      id: Date.now(),
+      name: member.name,
+      email: member.email,
+      role: member.role,
+    };
+    setMembers([...members, newMember]);  
+  }
 
   return (
     <div className="App">
       <h1>Team Members</h1>
       <List members={members} />
-      <Form />
+      <Form addNewMember={addNewMember} />
     </div>
   );
 }
