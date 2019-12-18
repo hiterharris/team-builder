@@ -30,7 +30,7 @@ function Form(props) {
 
   return (
     <div className="Form" onSubmit={submitForm}>
-        <h3>Add Member</h3>
+        <h2>Add Member</h2>
         <form className='form'>
             <input
                 id='name'

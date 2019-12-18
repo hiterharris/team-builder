@@ -7,7 +7,7 @@ function List(props) {
         {props.members.map( (member, i) => {
             return (
                 <div key={i} className='list-item'>
-                    <p >{member.name}</p>
+                    <h2>{member.name}</h2>
                     <p>{member.email}</p>
                     <p>{member.role}</p>
                 </div>

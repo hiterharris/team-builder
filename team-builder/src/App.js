@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
-import TeamMembers from './data/TeamMembers';
+import membersList from './data/membersList';
 import List from './components/List';
 import Form from './components/Form';
+import lambda from './images/lambda.png';
 import './App.css';
 
 function App() {
-  const [members, setMembers] = useState(TeamMembers);
+  const [members, setMembers] = useState(membersList);
   console.log(members);
 
   const addNewMember = member => {
@@ -20,9 +21,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Team Members</h1>
-      <List members={members} />
-      <Form addNewMember={addNewMember} />
+      <header>
+        <img src={lambda} />
+        <h1>Team Aaron/Brandon</h1>
+      </header>
+      <section className='content'>
+        <List members={members} />
+        <Form addNewMember={addNewMember} />
+      </section>
     </div>
   );
 }
