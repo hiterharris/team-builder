@@ -10,14 +10,15 @@ function Form(props) {
       }
   );
 
+  // Set member to value of form input
   const handleChanges = e => {
       setMember({
           ...member,
           [e.target.name] : e.target.value,
       })
-      console.log(e.target.value);
   }
 
+  // Add member changes to members and reset placeholders
   const submitForm = e => {
       e.preventDefault();
       props.addNewMember(member);

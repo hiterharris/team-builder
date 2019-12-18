@@ -7,8 +7,9 @@ import lambda from './images/lambda.png';
 import './App.css';
 
 function App() {
-  const [members, setMembers] = useState(membersList);
 
+  // Add new member to members
+  const [members, setMembers] = useState(membersList);
   const addNewMember = member => {
     const newMember = {
       id: Date.now(),
@@ -19,26 +20,32 @@ function App() {
     setMembers([...members, newMember]);  
   }
 
+  // Set search to value of search input 
+  // MUST BIND TO SEARCH COMPONENT
   const [search, setSearch] = useState('');
-
-  const updateSearch = (event) => {
-     setSearch(event.target.value);
+  const updateSearch = (e) => {
+     setSearch(e.target.value);
   }
 
+  // Filter members that match search
   let filterMembers = members.filter( (member) => {
     return member.name.toLowerCase().indexOf(search.toLowerCase()) !== -1;
-})
+  })
 
-console.log(members);
-console.log(filterMembers);
-
-const renderList = () => {
-  if(search.length > 0) {
-    return <List members={filterMembers} />
-  } else {
-    return <List members={members} />
+  // Conditionally render members or filterMembers
+  const renderList = () => {
+    if(search.length > 0) {
+      return <List members={filterMembers} />
+    } else {
+      return <List members={members} changeEditMode={changeEditMode} editMode={editMode}/>
+    }
   }
-}
+
+    // Toggle edit mode
+    const [editMode, setEditMode] = useState(false);
+    const changeEditMode = () => {
+      setEditMode(!editMode);
+    }
 
   return (
     <div className="App">
