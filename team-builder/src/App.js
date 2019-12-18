@@ -39,7 +39,7 @@ function App() {
   }
 
   let filterMembers = members.filter( (member) => {
-    return member.name.indexOf(search) !== -1;
+    return member.name.toLowerCase().indexOf(search.toLowerCase()) !== -1;
 })
 
 console.log(members);
