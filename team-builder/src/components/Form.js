@@ -25,7 +25,7 @@ function Form(props) {
           name: '',
           email: '',
           role: '',
-      })
+      });
   }
 
   return (
@@ -38,6 +38,7 @@ function Form(props) {
                 type='text'
                 placeholder='Name'
                 onChange={handleChanges}
+                value={member.name}
             />
             <input
                 id='email'
@@ -45,6 +46,7 @@ function Form(props) {
                 type='text'
                 placeholder='Email'
                 onChange={handleChanges}
+                value={member.email}
             />
             <input
                 id='role'
@@ -52,6 +54,7 @@ function Form(props) {
                 type='text'
                 placeholder='Role'
                 onChange={handleChanges}
+                value={member.role}
             />
             <button type="submit">Add</button>
         </form>
