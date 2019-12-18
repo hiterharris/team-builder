@@ -19,19 +19,6 @@ function App() {
     setMembers([...members, newMember]);  
   }
 
-  // const [searchTerm, setSearchTerm] = useState('');
-  // const handleChange = e => {
-  //   setSearchTerm(e.target.event);
-  // }
-
-  // const [searchResults, setSearchResults] = useState([]);
-  // useEffect(() => {
-  //   const results = members.filter( member =>
-  //     member.includes(searchTerm)
-  // );
-  //   setSearchResults(results);
-  // }, [searchTerm]);
-
   const [search, setSearch] = useState('');
 
   const updateSearch = (event) => {
