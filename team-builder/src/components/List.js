@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 
 function List(props) {
+
   return (
     <div className="List">
         {props.members.map( (member, i) => {
