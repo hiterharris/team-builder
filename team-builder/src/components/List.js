@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import '../App.css';
 
 function List(props) {
@@ -6,10 +6,10 @@ function List(props) {
     <div className="List">
         {props.members.map( (member, i) => {
             return (
-                <div className='list-item'>
-                    <p key={i}>{member.name}</p>
-                    <p key={i}>{member.email}</p>
-                    <p key={i}>{member.role}</p>
+                <div key={i} className='list-item'>
+                    <p >{member.name}</p>
+                    <p>{member.email}</p>
+                    <p>{member.role}</p>
                 </div>
             );
         })}
