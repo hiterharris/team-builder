@@ -1,3 +1,5 @@
+// Run SASS: sass --watch ./src/App.scss ./src/App.css
+
 .App {
     header {
         display: flex;
@@ -6,7 +8,7 @@
         }
         h1 {
             text-decoration: underline;
-            margin-left: 20%;
+            margin-left: 25%;
         }
     }
 
@@ -32,6 +34,13 @@
         background-color: rgba(255, 255, 255, 0.75);
         border-radius: 10px;
 
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5%;
+        }
+
         input {
             height: 25px;
             width: 200px;
@@ -39,6 +48,15 @@
             border-radius: 10px;
             border: none;
             padding: 2%;
+        }
+        
+        button {
+            height: 40px;
+            width: 75px;
+            border-radius: 10px;
+            font-size: 16px;
+            background-color: #06D69D;
+            color: white;
         }
     }
 }
@@ -49,7 +67,6 @@
     border-radius: 10px;
     padding: 0% 2% 2% 2%;
     margin: 2%;
-
 
     .form {
         display: flex;

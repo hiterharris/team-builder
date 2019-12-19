@@ -51,7 +51,7 @@ function App() {
     <div className="App">
       <header>
         <img src={lambda} />
-        <h1>Team Aaron/Brandon</h1>
+        <h1>Team Aaron</h1>
       </header>
       <section className='content'>
         <Search search={search} updateSearch={updateSearch.bind(this)} />

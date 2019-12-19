@@ -12,8 +12,8 @@ function List(props) {
                         <input key={i}  type='text' defaultValue={member.name} />
                         <input type='text' defaultValue={member.email} />
                         <input type='text' defaultValue={member.role} />
+                        <button onClick={props.changeEditMode}>Save</button>
                     </form>
-                    <button onClick={props.changeEditMode}>Save</button>
                 </div>
                 :
                 <div key={i} className='list-item' onClick={props.changeEditMode}>
